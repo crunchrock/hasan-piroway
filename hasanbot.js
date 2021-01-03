@@ -122,15 +122,17 @@ const hasanTalk = `
     bugsnax is a fun game. short and sweet.
     KINNA BUG KINNA SNAX  
 `
-const res = hasanTalk.split(" ");
+let res = hasanTalk.split(" ");
+res = res.filter(function(entry) { return entry.trim() != ''; });
 
 
 const talk = (wordCount) => {
     let sentence = "";
     for (i = 0; i < wordCount; i++ ) {
         let rando = Math.floor(Math.random() * res.length)
-        sentence + res[rando];
-        console.log(res[rando])
+        sentence += res[rando];
+        sentence += " ";
+          
     }
     console.log(sentence)
 }
