@@ -135,6 +135,7 @@ const talk = (wordCount) => {
           
     }
     console.log(sentence)
+    return sentence;
 }
 
 talk(30);
