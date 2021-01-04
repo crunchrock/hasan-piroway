@@ -11023,20 +11023,42 @@ my dude graduated and is not just a rocket scientist, but a rocket scientist w a
 this you?    
 A 70 year old coronavirus survivor in Seattle received a 181 page long hospital bill charging him $1,122,501.04 for life saving healthcare  
 `
-let res = hasanTalk.split(" ");
-res = res.filter(function(entry) { return entry.trim() != ''; });
+//formatting data sources for better output
+let hasanSplit = hasanTalk.split(" ");
+hasanSplit = hasanSplit.filter(function(entry) { return entry.trim() != ''; });
 
+let calowaySplit = calowayTalk.split(" ");
+calowaySplit = calowaySplit.filter(function(entry) { return entry.trim() != ''; });
+
+let shapiroSplit = shapiroTalk.split(" ");
+shapiroSplit = shapiroSplit.filter(function(entry) { return entry.trim() != ''; });
+
+//The function that makes the random message
 
 const talk = (wordCount) => {
     let sentence = "";
-    for (i = 0; i < wordCount; i++ ) {
-        let rando = Math.floor(Math.random() * res.length)
-        sentence += res[rando];
-        sentence += " ";
-          
-    }
+    let hasanCount = Math.floor(wordCount/3);
+    let shapiroCount = Math.floor(wordCount/3);
+    let calowayCount = Math.floor(wordCount/3);
+    for (i = 0; i < hasanCount; i++ ) {
+      let rando = Math.floor(Math.random() * hasanSplit.length)
+      sentence += hasanSplit[rando];
+      sentence += " ";
+      }
+
+    for (i = 0; i < shapiroCount; i++ ) {
+      let rando = Math.floor(Math.random() * shapiroSplit.length)
+      sentence += shapiroSplit[rando];
+      sentence += " ";
+      }
+    for (i = 0; i < calowayCount; i++ ) {
+      let rando = Math.floor(Math.random() * calowaySplit.length)
+      sentence += calowaySplit[rando];
+      sentence += " ";
+      }
+    
     console.log(sentence)
     return sentence;
 }
 
-talk(30);
+talk(30)
