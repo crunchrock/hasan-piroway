@@ -1,3 +1,4 @@
+
 //Carroway String Source
 const calowayTalk = `My baseline personality skews rabbit and I refuse to make excuses for this
 Onwards! Tonight we write and tomorrow we don't
@@ -11036,6 +11037,7 @@ shapiroSplit = shapiroSplit.filter(function(entry) { return entry.trim() != ''; 
 //The function that makes the random message
 
 const talk = (wordCount) => {
+  
     let sentence = "";
     let hasanCount = Math.floor(wordCount/3);
     let shapiroCount = Math.floor(wordCount/3);
@@ -11058,6 +11060,9 @@ const talk = (wordCount) => {
       }
     
     console.log(sentence)
+    window.onload=function() {
+      document.getElementById("tweetbox").innerHTML = sentence;
+    }
     return sentence;
 }
 
