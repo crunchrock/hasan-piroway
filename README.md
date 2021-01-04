@@ -7,7 +7,7 @@ It could be a lot better if I sorted my strings into things like nouns, adjectiv
 
 ## Run it.
 Everytime you [refresh this link](https://crunchrock.github.io/hasan-piroway/) you will get a new generated quote.
-If you load it up with Visual Code's live server or another local server or something like that, it will throw errors in node.js.
+If you load it up with Visual Code's live server or another local server or something like that it will work but it will throw errors in node.js.
 
 
 Thanks for stopping by and have a nice day.
